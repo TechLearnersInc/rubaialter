@@ -67,7 +67,7 @@ class rubaialter:
             action="store_true",
             help="Enable overwriting",
         )
-        print(parser.parse_args().__dict__)
+
         return parser.parse_args().__dict__
 
     # Received File Checking ↓

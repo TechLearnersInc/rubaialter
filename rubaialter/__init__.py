@@ -87,7 +87,7 @@ class rubaialter:
                 valid = False
 
         if not valid:
-            sys.exit(-1)
+            sys.exit()
 
     # Conversion ↓
     def __Conversion(self):

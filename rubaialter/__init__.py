@@ -52,9 +52,9 @@ class rubaialter:
             help="Convert to xlsx",
         )
 
-        # To SQLITE ↓
+        # To SQLITE3 ↓
         parser.add_argument(
-            "--sqlite",
+            "--sqlite3",
             default=False,
             action="store_true",
             help="Convert to sqlite",

@@ -52,5 +52,5 @@ to obtain the following CLI::
     --csv       Convert to csv
     --xls       Convert to xls
     --xlsx      Convert to xlsx
-    --sqlite    Convert to sqlite
+    --sqlite    Convert to sqlite3
     --force     Enable overwriting

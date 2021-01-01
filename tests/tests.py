@@ -1,10 +1,8 @@
 import os
-import sys
 import shutil
-import pytest
-import pandas
 import subprocess
 
+# Global Variables ↓
 inputFileCSV: str = "datasets/test.csv"
 outputFileCSV: str = "test.csv"
 

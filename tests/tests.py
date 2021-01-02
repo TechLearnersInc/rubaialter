@@ -147,7 +147,7 @@ def test_sqlite3_to_csv():
     global inputFileSQLITE3, outputFileCSV
     subprocess.check_call(["python", "-m", "rubaialter", inputFileSQLITE3, "--csv"])
     assert os.path.exists("Sheet1.csv")
-    os.remove("")
+    os.remove("Sheet1.csv")
 
 
 # SQLITE3 to XLS ↓

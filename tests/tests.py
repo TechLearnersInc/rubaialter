@@ -165,6 +165,20 @@ def test_sqlite3_to_xlsx():
     os.remove(outputFileXLSX)
 
 
+# CSV to XLS XLSX SQLITE3 ↓
+def test_csv_to_xls_xlsx_sqlite3():
+    global inputFileCSV, outputFileXLS
+    subprocess.check_call(
+        ["python", "-m", "rubaialter", inputFileCSV, "--xls", "--xlsx", "--sqlite3"]
+    )
+    assert os.path.exists(outputFileXLS)
+    assert os.path.exists(outputFileXLSX)
+    assert os.path.exists(outputFileSQLITE3)
+    os.remove(outputFileXLS)
+    os.remove(outputFileXLSX)
+    os.remove(outputFileSQLITE3)
+
+
 # Cleanup ↓
 def test_clean():
     shutil.rmtree("rubaialter")

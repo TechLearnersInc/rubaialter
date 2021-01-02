@@ -21,7 +21,7 @@ def main():
         # the version across setup.py and the project code, see
         # http://packaging.python.org/en/latest/tutorial.html#version
         version="1.1.0b1",
-        description="A module for altering numerical dataset's formats, made on top of Pandas.",
+        description="Rubaialter is a module that will perform conversions among these .csv ,.xlsx, .xls, .sqlite3 file formats using Pandas under the hood.",
         long_description=long_description,
         long_description_content_type="text/x-rst",
         # The project's main homepage.

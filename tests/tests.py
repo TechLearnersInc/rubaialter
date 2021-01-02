@@ -68,7 +68,6 @@ def test_xls_to_xls():
         ["python", "-m", "rubaialter", inputFileXLS, "--xls"]
     )
     output = output.decode("utf-8").strip()
-    os.remove(outputFileXLS)
     assert output == "The file is already in xls format."
 
 
@@ -76,8 +75,8 @@ def test_xls_to_xls():
 def test_xls_to_csv():
     global inputFileXLS, outputFileCSV
     subprocess.check_call(["python", "-m", "rubaialter", inputFileXLS, "--csv"])
-    assert os.path.exists(outputFileCSV)
-    os.remove(outputFileCSV)
+    assert os.path.exists("Sheet1.csv")
+    os.remove("Sheet1.csv")
 
 
 # xls to XLSX ↓
@@ -104,7 +103,6 @@ def test_xlsx_to_xlsx():
         ["python", "-m", "rubaialter", inputFileXLSX, "--xlsx"]
     )
     output = output.decode("utf-8").strip()
-    os.remove(outputFileXLSX)
     assert output == "The file is already in xlsx format."
 
 
@@ -112,11 +110,11 @@ def test_xlsx_to_xlsx():
 def test_xlsx_to_csv():
     global inputFileXLSX, outputFileCSV
     subprocess.check_call(["python", "-m", "rubaialter", inputFileXLSX, "--csv"])
-    assert os.path.exists(outputFileCSV)
-    os.remove(outputFileCSV)
+    assert os.path.exists("Sheet1.csv")
+    os.remove("Sheet1.csv")
 
 
-# xlsx to XLS ↓
+# XLSX to XLS ↓
 def test_xlsx_to_xls():
     global inputFileXLSX, outputFileXLS
     subprocess.check_call(["python", "-m", "rubaialter", inputFileXLSX, "--xls"])
@@ -124,7 +122,7 @@ def test_xlsx_to_xls():
     os.remove(outputFileXLS)
 
 
-# xlsx to SQLITE3 ↓
+# XLSX to SQLITE3 ↓
 def test_xlsx_to_sqlite3():
     global inputFileXLSX, outputFileSQLITE3
     subprocess.check_call(["python", "-m", "rubaialter", inputFileXLSX, "--sqlite3"])
@@ -132,7 +130,7 @@ def test_xlsx_to_sqlite3():
     os.remove(outputFileSQLITE3)
 
 
-# sqlite3 to sqlite3 ↓
+# SQLITE3 to SQLITE3 ↓
 def test_sqlite_to_sqlite():
     global inputFileSQLITE3, outputFileSQLITE3
     shutil.copyfile(inputFileSQLITE3, outputFileSQLITE3)
@@ -144,15 +142,15 @@ def test_sqlite_to_sqlite():
     assert output == "The file is already in sqlite3 format."
 
 
-# sqlite3 to CSV
+# SQLITE3 to CSV
 def test_sqlite3_to_csv():
     global inputFileSQLITE3, outputFileCSV
     subprocess.check_call(["python", "-m", "rubaialter", inputFileSQLITE3, "--csv"])
-    assert os.path.exists(outputFileCSV)
-    os.remove(outputFileCSV)
+    assert os.path.exists("Sheet1.csv")
+    os.remove("")
 
 
-# sqlite3 to XLS ↓
+# SQLITE3 to XLS ↓
 def test_sqlite3_to_xls():
     global inputFileSQLITE3, outputFileXLS
     subprocess.check_call(["python", "-m", "rubaialter", inputFileSQLITE3, "--xls"])

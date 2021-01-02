@@ -47,7 +47,7 @@ def toXLSX(inputFilePath: str):
     )  # Get File Name & Extension
 
     if file_extension == ".xlsx":
-        print("The is already in xlsx format.")
+        print("The file is already in xlsx format.")
     elif file_extension == ".sqlite3":
         sqlite_to_xlsx(inputFilePath)
     elif file_extension == ".xls":

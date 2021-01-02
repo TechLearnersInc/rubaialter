@@ -63,7 +63,6 @@ def test_csv_to_sqlite3():
 # XLS to XLS ↓
 def test_xls_to_xls():
     global inputFileXLS, outputFileXLS
-    shutil.copyfile(inputFileXLS, outputFileCSV)
     output = subprocess.check_output(
         ["python", "-m", "rubaialter", inputFileXLS, "--xls"]
     )
